@@ -21,37 +21,39 @@ const AllProducts = ({ products, sliceNumber }) => {
         <Typography
           variant="h2"
           gutterBottom
-          style={bannerFontStyle}
-          sx={{ color: "var(--color)" }}
+          sx={{ color:"#171717", marginTop:'120px', marginBottom:'20px', fontSize:'40px'}}
         >
-          CHOOSE YOUR SMART PHONE
+          World Tourist Places
         </Typography>
-        <Typography variant="body1" gutterBottom style={bannerFontStyle}>
-          PHONE WE DELIVER
+        <Typography variant="body1" gutterBottom sx={{ color:"#171717", marginBottom:'60px', fontSize:'20px'}}>
+          Our Places
         </Typography>
       </Box>
-      <Grid container spacing={3}>
+      <Grid  container spacing={3}>
         {products.slice(0, sliceNumber).map((product) => (
           <Grid key={product._id} item spacing={3} xs={12} sm={6} md={4}>
             <Card
               sx={{
-                maxWidth: 325,
+                width:'100%',
                 boxShadow: 2,
-                mx: "auto",
+                mx:'auto',
                 borderRadius: "20px",
               }}
               className="product-card"
             >
+             <div className="d-flex justify-content-center align-items-center">
+             <div>
               <img
                 src={product.image}
                 style={{
-                  padding: "15px",
+                  padding:'10px',
                   objectFit: "contain",
                   width: "200px",
                   height: "300px",
                 }}
                 alt=""
               />
+              </div>
               <CardContent>
                 <Typography
                   style={bannerFontStyle}
@@ -77,12 +79,11 @@ const AllProducts = ({ products, sliceNumber }) => {
                     mt: 2,
                     background: "none",
                     color: "black",
-                    border: 2,
-                    borderColor: "var(--color)",
-                    borderRadius: 20,
-                    fontSize: 16,
-                    px: 4,
-                    py: 1,
+                    border:' 1px solid #0E2435',
+                    borderRadius: 6,
+                    fontSize: 14,
+                    px: 2,
+                  
                   }}
                   onClick={() => {
                     history.push(`/explore/${product._id}`);
@@ -91,6 +92,7 @@ const AllProducts = ({ products, sliceNumber }) => {
                   Purchase
                 </Button>
               </CardContent>
+             </div>
             </Card>
           </Grid>
         ))}

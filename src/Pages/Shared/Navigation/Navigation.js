@@ -91,11 +91,11 @@ const Navigation = () => {
                   <Button style={buttonStyle}>{user?.displayName}</Button>
                   <Button
                     style={buttonStyle}
-                    variant="contained"
+                    variant="inherits"
                     onClick={() => {
                       signOutUser(history);
                     }}
-                    sx={{ backgroundImage: "var(--button-bg)" }}
+                    sx={{ background:'#756146'  }}
                   >
                     Log Out
                   </Button>
@@ -105,7 +105,7 @@ const Navigation = () => {
                   <Button
                     style={buttonStyle}
                     variant="inherits"
-                    sx={{ background:'#756146', }}
+                    sx={{ background:'#756146' }}
                    
                   >
                     Login

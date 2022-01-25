@@ -13,7 +13,7 @@ const Products = () => {
       .then((data) => setProducts(data));
   }, []);
   const containerStyle = {
-    backgroundImage: `url("https://i.ibb.co/7Q50Zr6/product-Bg.png")`,
+    // backgroundImage: `url("https://i.ibb.co/7Q50Zr6/product-Bg.png")`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   };
@@ -22,7 +22,7 @@ const Products = () => {
       <Container sx={{ mb: 10, mt: 7 }}>
         {products.length ? (
           <>
-            <Product products={products} sliceNumber={6}></Product>
+            <Product products={products} ></Product>
             <Button
               variant="contained"
               sx={{
