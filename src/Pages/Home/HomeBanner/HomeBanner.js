@@ -15,23 +15,23 @@ const HomeBanner = () => {
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img  src={s1} class="d-block w-100" alt="..." />
+      <img width="100%" height="550px"  src={s1} class="d-block " alt="..." />
       <div  class="carousel-caption d-none d-md-block">
-        <h5 style={{marginTop:'-370px'}} >LUXE HOTEL</h5>
+        <h2>LUXE HOTEL</h2>
         <p>Representative placefull make your vacation comfortable</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img  src={s2} class="d-block w-100" alt="..." />
+      <img width="100%" height="550px"  src={s2} class="d-block " alt="..." />
       <div class="carousel-caption d-none d-md-block">
-        <h5>BORA HOTEL</h5>
+        <h2>BORA HOTEL</h2>
         <p>Reserve Room for Family Vacation DELUXE HOTEL Make Your Vacation Comfortable</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img  src={s3} class="d-block w-100" alt="..." />
+      <img width="100%" height="550px"  src={s3} class="d-block " alt="..." />
       <div class="carousel-caption d-none d-md-block">
-        <h5>DELUXE HOTEL</h5>
+        <h2>DELUXE HOTEL</h2>
         <p>A Best Place To Enjoy Your Life</p>
       </div>
     </div>
