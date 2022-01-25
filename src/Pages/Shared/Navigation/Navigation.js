@@ -3,6 +3,7 @@ import { Box, Button, Container } from "@mui/material";
 import { NavLink, useHistory } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
+import logo from '../../../../src/TravelCarosuel/logo.png';
 import "./Navigation.css";
 import useAuth from "../../../hooks/useAuth";
 const Navigation = () => {
@@ -25,8 +26,8 @@ const Navigation = () => {
 
   const history = useHistory();
   return (
-    <Box className="navbar">
-      <Container sx={{ py: 3, mb: 5 }}>
+    <Box style={{ background:'#eee'}} className="navbar">
+      <Container sx={{ }}>
         <Box
           sx={{
             display: "flex",
@@ -37,11 +38,7 @@ const Navigation = () => {
         >
           <Box sx={{ alignSelf: "flex-start" }}>
             <NavLink to="/home">
-              {/* <img
-                style={{ width: "100px", height: "80px" }}
-                src="https://i.ibb.co/yPCncsc/depositphotos-125022518-stock-illustration-m-letter-logo-template.png"
-                alt=""
-              /> */}
+             <img width='70%' src={logo} alt="" />
             </NavLink>
           </Box>
           <Box
@@ -107,8 +104,9 @@ const Navigation = () => {
                 <NavLink to="/login">
                   <Button
                     style={buttonStyle}
-                    variant="contained"
-                    sx={{ backgroundImage: "var(--button-bg)" }}
+                    variant="inherits"
+                    sx={{ background:'#756146', }}
+                   
                   >
                     Login
                   </Button>
