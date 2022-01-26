@@ -44,7 +44,7 @@ const Login = () => {
           <Box
             sx={{
               display: "inline",
-              color: "var(--color)",
+              color: "#000",
               fontWeight: "bold",
               width: "5px  ",
             }}
@@ -70,15 +70,16 @@ const Login = () => {
             type="password"
             placeholder="password"
           />
-          <Button type="submit">Login</Button>
+          <Button style={{background:'#000'}} type="submit">Login</Button>
           <Button
-            sx={{ mt: 2 }}
+           style={{background:'#000'}}
+            sx={{ mt: 2 ,}}
             onClick={() => singInWithGoogle(history, location)}
           >
             Sign In with Google
           </Button>
           <NavLink
-            style={{ marginTop: "20px", color: "var(--color)" }}
+            style={{ marginTop: "20px", color: "#000" }}
             to="/register"
           >
             New User? Create an account

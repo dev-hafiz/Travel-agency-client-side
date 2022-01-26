@@ -27,7 +27,7 @@ const AddProduct = () => {
   return (
     <Container>
       <Typography variant="h3" style={contactStyle}>
-        Add A <span style={{ color: "var(--color)" }}>PRODUCT</span>
+        Add A BEAUTIFUL PLACES
       </Typography>
       <Box
         sx={{ width: { xs: "90%", sm: "80%", md: "80%" }, mx: "auto", my: 4 }}
@@ -72,7 +72,8 @@ const AddProduct = () => {
           <Button
             variant="contained"
             sx={{
-              backgroundImage: "var(--button-bg)",
+              background: "#756146",
+              color:'#fff',
               borderRadius: "25px",
               p: "8px 40px",
               mt: 3,

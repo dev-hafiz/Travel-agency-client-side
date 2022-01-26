@@ -38,7 +38,7 @@ const Register = () => {
           <Box
             sx={{
               display: "inline",
-              color: "var(--color)",
+              color: "#000",
               fontWeight: "bold",
               width: "5px  ",
             }}
@@ -72,9 +72,9 @@ const Register = () => {
             type="password"
             placeholder="Enter Your Password"
           />
-          <Button type="submit">Register</Button>
+          <Button style={{background:'#000'}} type="submit">Register</Button>
           <NavLink
-            style={{ marginTop: "20px", color: "var(--color)" }}
+            style={{ marginTop: "20px", color: "#000" }}
             to="/login"
           >
             Already Registered? Login

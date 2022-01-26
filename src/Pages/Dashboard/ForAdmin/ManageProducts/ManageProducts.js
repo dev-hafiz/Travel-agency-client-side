@@ -37,9 +37,9 @@ const ManageProducts = () => {
           variant="h2"
           gutterBottom
           style={bannerFontStyle}
-          sx={{ color: "var(--color)" }}
+          sx={{ color: "#171717" }}
         >
-          Products that we have
+          All Booked Placess That We've
         </Typography>
       </Box>
       <Grid container spacing={3}>

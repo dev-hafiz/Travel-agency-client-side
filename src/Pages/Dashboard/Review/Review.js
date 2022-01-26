@@ -28,19 +28,13 @@ const Review = () => {
   return (
     <Container>
       <Typography variant="h2" style={reviewStyle} sx={{ my: 4 }}>
-        REVIEW <span style={{ color: "var(--color)" }}>OUR SERVICE</span>
+       Share Your Travel Experience
       </Typography>
       <Box
         sx={{ width: { xs: "90%", sm: "80%", md: "80%" }, mx: "auto", my: 4 }}
         className="contact-form"
       >
-        <Typography
-          variant="h5"
-          sx={{ textAlign: "center", pt: 4 }}
-          style={reviewStyle}
-        >
-          Send us a message
-        </Typography>
+        
         <form action="" onSubmit={handleSubmit(onSubmit)} className="form">
           <input type="text" placeholder="Your Name" {...register("name")} />
           <input
@@ -69,7 +63,7 @@ const Review = () => {
           <Button
             variant="contained"
             sx={{
-              backgroundImage: "var(--button-bg)",
+              background: "#000",
               borderRadius: "25px",
               p: "8px 40px",
               mt: 3,

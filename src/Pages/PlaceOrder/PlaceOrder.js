@@ -55,7 +55,7 @@ const PlaceOrder = () => {
               textAlign: "center",
               fontFamily: "var(--dosis-font)",
               fontWeight: 600,
-              color: "var(--color)",
+              color: "#000",
             }}
           >
             {orderedProduct.name}
@@ -95,7 +95,7 @@ const PlaceOrder = () => {
               type="text"
               placeholder="Enter Your Address"
             />
-            <Button type="submit">Purchase</Button>
+            <Button style={{background:'#000'}} type="submit">Booking Place</Button>
             {error && <Typography>{error}</Typography>}
           </form>
         </Box>

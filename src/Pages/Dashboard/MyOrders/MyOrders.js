@@ -38,12 +38,12 @@ const MyOrders = () => {
         variant="h3"
         sx={{
           mb: 8,
-          color: "var(--blue-color)",
+          color: "#000",
           fontFamily: "var(--dosis-font)",
           fontWeight: 600,
         }}
       >
-        My Orders
+       My Booked Place
       </Typography>
       <Grid container spacing={3} sx={{ boxShadow: "var(--box-shadow)" }}>
         {myOrders.map((order) => (

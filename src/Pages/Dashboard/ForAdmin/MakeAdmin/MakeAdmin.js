@@ -29,7 +29,7 @@ const MakeAdmin = () => {
           placeholder="Email"
           style={{ maxWidth: "350px" }}
         />
-        <Button type="submit">Make Admin</Button>
+        <Button style={{background:'#756146'}} type="submit">Make Admin</Button>
       </form>
     </Container>
   );

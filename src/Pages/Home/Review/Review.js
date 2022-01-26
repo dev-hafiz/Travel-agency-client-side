@@ -32,7 +32,7 @@ const Review = () => {
             my: 4,
           }}
         >
-          WHAT OUR <span style={{ color: "var(--blue-color)" }}>CUSTOMER'S SAY</span>
+          WHAT OUR <span style={{ color: "var(--blue-color)" }}>VISITER'S SAY</span>
         </Typography>
       </Box>
       <Slider {...settings}>
