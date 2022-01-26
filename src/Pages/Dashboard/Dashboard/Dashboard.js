@@ -41,12 +41,15 @@ function Dashboard(props) {
   const dashboardLink = {
     textAlign: "left",
     position: "10px 5px",
+    color:'#000'
   };
   const dashboardButton = {
     fontSize: "15px",
-    color: "var(--color)",
+    color: "#000",
     fontWeight: "bold",
     margin: "8px 0",
+    display:'flex',
+    justifyContent:'start',
   };
   const drawer = (
     <Box
@@ -71,6 +74,16 @@ function Dashboard(props) {
             textTransform: "none",
           }}
         >
+        <Button
+            color="inherit"
+            style={dashboardButton}
+            onClick={() => {
+              signOutUser(history);
+            }}
+          >
+            Log Out
+          </Button>
+          
           <NavLink style={dashboardLink} to={`/`}>
             <Button color="inherit" style={dashboardButton}>
               Home
@@ -78,12 +91,12 @@ function Dashboard(props) {
           </NavLink>
           <NavLink style={dashboardLink} to={`${url}/manageAllOrders`}>
             <Button color="inherit" style={dashboardButton}>
-              Manage All Orders
+              Manage All Booking
             </Button>
           </NavLink>
           <NavLink style={dashboardLink} to={`${url}/AddProduct`}>
             <Button color="inherit" style={dashboardButton}>
-              Add a product
+              Add Visiting Place
             </Button>
           </NavLink>
           <NavLink style={dashboardLink} to={`${url}/makeAdmin`}>
@@ -93,18 +106,10 @@ function Dashboard(props) {
           </NavLink>
           <NavLink style={dashboardLink} to={`${url}/manageProducts`}>
             <Button color="inherit" style={dashboardButton}>
-              Manage Products
+              Manage Booking
             </Button>
           </NavLink>
-          <Button
-            color="inherit"
-            style={dashboardButton}
-            onClick={() => {
-              signOutUser(history);
-            }}
-          >
-            Log Out
-          </Button>
+          
         </Box>
       ) : (
         <Box
@@ -124,7 +129,7 @@ function Dashboard(props) {
           </NavLink>
           <NavLink style={dashboardLink} to={`${url}/myOrders`}>
             <Button color="inherit" style={dashboardButton}>
-              My Orders
+              My Booking Place
             </Button>
           </NavLink>
           <NavLink style={dashboardLink} to={`${url}/pay`}>
@@ -134,7 +139,7 @@ function Dashboard(props) {
           </NavLink>
           <NavLink style={dashboardLink} to={`${url}/review`}>
             <Button color="inherit" style={dashboardButton}>
-              Review
+              Visiting Experience
             </Button>
           </NavLink>
           <Button
@@ -178,9 +183,9 @@ function Dashboard(props) {
             variant="h6"
             noWrap
             component="div"
-            sx={{ color: "var(--blue-color)", py: 3 }}
+            sx={{ color: "#000", py: 3 }}
           >
-            Phone Dashboard
+            SEE YOUR ACTIVITIES
           </Typography>
         </Toolbar>
       </AppBar>
@@ -237,12 +242,13 @@ function Dashboard(props) {
               variant="h4"
               component="h1"
               sx={{
-                color: "var(--blue-color)",
+                color: "#000",
                 fontFamily: "var(--dosis-font )",
                 mt: 15,
               }}
             >
-              click any side bar link to see the page source
+              Well Conme To Travel Ahency's Dash Board <br />
+              See Your Activities, Waiting on your clicking
             </Typography>
           </Route>
           <Route path={`${path}/myOrders`}>
