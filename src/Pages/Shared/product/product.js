@@ -1,4 +1,5 @@
 import React from "react";
+import './Product.css';
 import {
   Button,
   Card,
@@ -8,7 +9,7 @@ import {
   Box,
 } from "@mui/material";
 import Rating from "react-rating";
-import { useHistory } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 const AllProducts = ({ products, sliceNumber }) => {
   const history = useHistory();
   const bannerFontStyle = {
@@ -31,69 +32,62 @@ const AllProducts = ({ products, sliceNumber }) => {
       </Box>
       <Grid  container spacing={3}>
         {products.slice(0, sliceNumber).map((product) => (
-          <Grid key={product._id} item spacing={3} xs={12} sm={6} md={4}>
-            <Card
-              sx={{
-                width:'100%',
-                boxShadow: 2,
-                mx:'auto',
-                borderRadius: "20px",
-              }}
-              className="product-card"
-            >
-             <div className="d-flex justify-content-center align-items-center">
-             <div>
-              <img
-                src={product.image}
-                style={{
-                  padding:'10px',
-                  objectFit: "contain",
-                  width: "200px",
-                  height: "300px",
-                }}
-                alt=""
-              />
-              </div>
-              <CardContent>
-                <Typography
-                  style={bannerFontStyle}
-                  gutterBottom
-                  variant="h5"
-                  component="h5"
-                >
-                  {product.name}
-                </Typography>
-                <Typography variant="h5" style={bannerFontStyle} component="p">
-                  $ {product.price}
-                </Typography>
-                <Rating
-                  initialRating={product.rating}
-                  readonly
-                  emptySymbol="far fa-star rating"
-                  fullSymbol="fas fa-star rating"
-                ></Rating>
-                <Button
-                  sx={{
-                    display: "block",
-                    mx: "auto",
-                    mt: 2,
-                    background: "none",
-                    color: "black",
-                    border:' 1px solid #0E2435',
-                    borderRadius: 6,
-                    fontSize: 14,
-                    px: 2,
+          <Grid key={product._id} item spacing={3} xs={12} sm={6} md={12}>
+          
+          <div style={{display:'flex', alignItems:'center', marginTop:'80px'}}  className="row singelNewsbox">
+            <div className="col-lg-3 clo-md-3 col-12">
+            <div className="newsImage">
+                        <img src={product.image} alt="" />
+
+                        <div className="link-newsbox">
+                            <NavLink to="#">Belongs on List?</NavLink>
+                            <NavLink to="#"><i className="far fa-thumbs-up"></i>Yes</NavLink>
+                            <NavLink to="#"><i className="far fa-thumbs-down"></i>No</NavLink>
+                        </div>
+
+          </div>
+            </div>
+            <div className="col-lg-9 clo-md-9 col-12">
+              
+          
+          <div className="newsDescription">
+                        <h2>{product.name} </h2>
+                        <p>{product.description}</p>
+                        
                   
-                  }}
-                  onClick={() => {
+                     <button onClick={() => {
                     history.push(`/explore/${product._id}`);
-                  }}
-                >
-                  Purchase
-                </Button>
-              </CardContent>
-             </div>
-            </Card>
+                  }}>  
+                   <NavLink  className="parisBtn" to="#"> <i className="fas fa-chevron-right"></i> Booking Place</NavLink>
+                  </button>
+                  <div style={{paddingTop:'6px', paddingBottom:'10px'}}>
+                  <Rating
+       
+                    initialRating={product.rating}
+                    readonly
+                    emptySymbol="far fa-star rating"
+                    fullSymbol="fas fa-star rating"
+                  ></Rating>
+                  </div>
+
+
+                        <div className="alinknews">
+                            <NavLink className="prbtn" to="#"><i className="fas fa-bed"></i>BEST HOTELS</NavLink>
+                            <NavLink className="prbtn" to="#"><i className="fas fa-plane-departure"></i>FLIGHTS</NavLink>
+                            <NavLink className="prbtn" to="#"><i className="fas fa-map-marker-alt"></i>THINGS TO DO</NavLink>
+                        </div>
+                    </div>
+            </div>
+          </div>
+          
+          <div >
+          
+         
+          </div>
+        
+          
+          
+         
           </Grid>
         ))}
       </Grid>

@@ -7,7 +7,7 @@ const ProductDetail = ({ id }) => {
   useEffect(() => {
     fetch(`http://localhost:5000/products/${id}`)
       .then((res) => res.json())
-      .then((data) => setSingleProduct(data.products));
+      .then((data) => setSingleProduct(data));
   }, [id]);
   const history = useHistory();
   return (
@@ -15,7 +15,7 @@ const ProductDetail = ({ id }) => {
       <Grid
         container
         spacing={4}
-        sx={{ width: "90%", mx: "auto", borderRadius: 3, py: 4, px: 4 }}
+        sx={{ width: "90%", mx: "auto", borderRadius: 3, py: 4, px: 4, display:'flex', alignItems:'center' }}
         className="productDetail-card"
       >
         <Grid item xs={12} sm={10} sx={{ mx: { sm: "auto" } }} md={5}>
@@ -41,14 +41,14 @@ const ProductDetail = ({ id }) => {
               fontWeight: 600,
               fontFamily: "var(--nunito)",
               mt: 2,
-              color: "var(--blue-color)",
+              color: "#171717",
             }}
           >
             Price : {singleProduct.price}
           </Typography>
           <Typography
             variant="h5"
-            sx={{ fontFamily: "var(--nunito)", mt: 2, color: "var(--color)" }}
+            sx={{ fontFamily: "var(--nunito)", mt: 2, color: "#171717" }}
           >
             {singleProduct.name}
           </Typography>
@@ -58,7 +58,7 @@ const ProductDetail = ({ id }) => {
               fontFamily: "var(--nunito )",
               width: { sm: "80%", md: "70%" },
               textAlign: "justify",
-              background: "#edf9ff",
+              background: "#eee",
               color: "#081f46",
               p: "25px 20px",
               mt: 4,
@@ -69,9 +69,9 @@ const ProductDetail = ({ id }) => {
             {singleProduct?.description?.slice(0, 250)}...
           </Typography>
           <Button
-            variant="contained"
+            variant="inherits"
             sx={{
-              backgroundImage: "var(--button-bg)",
+              background:'#756146',
               borderRadius: "30px",
               p: "10px 35px",
               mt: 3,
@@ -83,7 +83,7 @@ const ProductDetail = ({ id }) => {
               history.push(`/placeorder/${singleProduct._id}`);
             }}
           >
-            Purchase
+            Booking Place Now
           </Button>
         </Grid>
       </Grid>
