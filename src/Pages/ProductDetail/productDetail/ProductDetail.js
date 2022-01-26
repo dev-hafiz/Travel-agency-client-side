@@ -7,7 +7,7 @@ const ProductDetail = ({ id }) => {
   useEffect(() => {
     fetch(`http://localhost:5000/products/${id}`)
       .then((res) => res.json())
-      .then((data) => setSingleProduct(data));
+      .then((data) => setSingleProduct(data.products));
   }, [id]);
   const history = useHistory();
   return (

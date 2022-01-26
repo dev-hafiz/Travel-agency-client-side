@@ -10,7 +10,7 @@ const Products = () => {
   useEffect(() => {
     fetch("http://localhost:5000/products")
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) => setProducts(data.products));
   }, []);
   const containerStyle = {
     // backgroundImage: `url("https://i.ibb.co/7Q50Zr6/product-Bg.png")`,
