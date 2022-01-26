@@ -1,119 +1,63 @@
-import { Button, Container, Grid, List, ListItem, Typography } from '@mui/material';
-import { Box } from '@mui/system';
 import React from 'react';
-import { RiFacebookFill } from 'react-icons/ri';
-import { AiFillInstagram, AiOutlineGithub } from 'react-icons/ai';
 import "./Footer.css"
+import footerBg from '../../../../src/Musem/footer-bg.png';
+import logoFoooter from '../../../../src/Musem/top-logo.png';
+
 const Footer = () => {
 
   return (
-    <Box className="footerStyle">
-      <Container>
-        <Grid container spacing={4}>
-          <Grid item xs={12} sm={6} md={4}>
-            <List>
-              <Typography variant="h6" sx={{ textAlign: "left", ml: 2 }}>
-                {" "}
-                <Box
-                  sx={{
-                    color: "var(--color)",
-                    display: "inline-block",
-                    fontWeight: "bold",
-                  }}
-                >
-                  {" "}
-                  |{" "}
-                </Box>{" "}
-                Menu
-              </Typography>
-              <ListItem className="footer-links"> Home</ListItem>
-              <ListItem className="footer-links"> Reviews</ListItem>
-              <ListItem className="footer-links"> Contact Us</ListItem>
-              <ListItem className="footer-links"> Products</ListItem>
-            </List>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={4}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "flex-start",
-            }}
-          >
-            <Typography variant="h6" sx={{ textAlign: "left", ml: 2 }}>
-              {" "}
-              <Box
-                sx={{
-                  color: "var(--color)",
-                  display: "inline-block",
-                  fontWeight: "bold",
-                }}
-              >
-                {" "}
-                |{" "}
-              </Box>{" "}
-              Contact Us
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{ textAlign: "left", ml: 2, my: 2 }}
-            >
-              51st St, New York, NY 10019
-            </Typography>
-            <Typography variant="body1" sx={{ textAlign: "left", ml: 2 }}>
-              Call Us: 212.262.3200
-            </Typography>
-            <Typography variant="h6" sx={{ textAlign: "left", ml: 2, mt: 3 }}>
-              {" "}
-              <Box
-                sx={{
-                  color: "var(--color)",
-                  display: "inline-block",
-                  fontWeight: "bold",
-                }}
-              >
-                {" "}
-                |{" "}
-              </Box>{" "}
-              Social Media Links
-            </Typography>
-            <Box sx={{ ml: 2, mt: 3 }}>
-              <a
-                target="blank"
-                href="https://www.facebook.com/profile.php?id=100009713476649"
-              >
-                <RiFacebookFill className="footer-icons" />
-              </a>
-              <a target="blank" href="https://www.instagram.com/sa_kha_wat/">
-                <AiFillInstagram className="footer-icons" />
-              </a>
-              <a target="blank" href="https://github.com/shuvo794">
-                <AiOutlineGithub className="footer-icons" />
-              </a>
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Box>
-              <input
-                type="text"
-                className="subscribe"
-                placeholder="Subscribe "
-              />
-              <Button
-                variant="contained"
-                sx={{ background: "var(--button-bg)" }}
-              >
-                Subscribe
-              </Button>
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
+    <div style={{ backgroundImage: `url(${footerBg})`, height:"100vh", backgroundPosition: "center center", paddingTop: "160px", backgroundSize : "cover"}}>
+              
+              <div className="container">
+                    <div className="row bottom-footer-wrapper">
+                         <div className="col-lg-3 col-md-6 col-12">
+                            <div className="footer-logo">
+                                 <img className="img-fluid" src={logoFoooter} alt="" />
+                            </div>  
+                            <div>
+                                 <p className="contact-link"><i className="fas fa-phone"></i> +1 (009) 99 143 77</p>
+                                 <p className="contact-link"><i className="far fa-envelope"></i> travelcontact@agency.mail</p>
+                                 <p className="contact-link"><i className="fas fa-map-marker-alt"></i> Zip : +990 hilTown,  </p>
+                            </div>
+                         </div>
+                         <div className="col-lg-3 col-md-6 col-12">
+                              <h3 className="bottom-title">Quick Links</h3>
+                              <p className="connect-link"><i className="fas fa-arrow-right"></i> Famous Tour</p>
+                              <p className="connect-link"><i className="fas fa-arrow-right"></i> Tour Blogs</p>
+                              <p className="connect-link"><i className="fas fa-arrow-right"></i>Find Place</p>
+                              <p className="connect-link"><i className="fas fa-arrow-right"></i>
+                              Take Ticket</p>
+                              <p className="connect-link"><i className="fas fa-arrow-right"></i>
+                              Winter Place</p>
+                         </div>
+                         <div className="col-lg-3 col-md-6 col-12">
+                              <h3 className="bottom-title">Important Links</h3>
+                              <p className="connect-link"><i className="fas fa-arrow-right"></i>
+                              Destination</p>
+                              <p className="connect-link"><i className="fas fa-arrow-right"></i>
+                              Get In Touch</p>
+                              <p className="connect-link"><i className="fas fa-arrow-right"></i>
+                              Who We Are</p>
+                              <p className="connect-link"><i className="fas fa-arrow-right"></i>
+                              Contact Us</p>
+                         </div>
+                         <div className="col-lg-3 col-md-6 col-12">
+                              <div className="input-bottom">
+                                   <input placeholder="enter your email" type="email" name="" id="" />
+                                   <input placeholder="your report" type="text" name="" id="" />
+                                   
+                                   <input className="submitBtn" type="submit" value="Send Mail" />
+                              </div>
+                         </div>
+                    </div>
+              </div>
+
+              <div className="mini-footer">
+                <div className="copy-footer">
+                     <p>© CopyRight Privacy | Policy  2022</p>
+                </div>
+              </div>
+          </div>
   );
 };
 

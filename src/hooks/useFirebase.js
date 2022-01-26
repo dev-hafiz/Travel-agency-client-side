@@ -8,6 +8,7 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
+  sendEmailVerification
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 
@@ -25,6 +26,7 @@ const useFirebase = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
+        verifyEmail()
         updateProfile(auth.currentUser, {
           displayName: name,
         })
@@ -44,6 +46,14 @@ const useFirebase = () => {
         setIsLoading(false);
       });
   };
+
+  //Email verication Massage
+  const verifyEmail = () =>{
+    sendEmailVerification(auth.currentUser)
+    .then(result=>{
+      // console.log(result);
+    })
+  }
   // sign in a user with firebase authentication
   const singInUser = ({ email, password }, location, history) => {
     signInWithEmailAndPassword(auth, email, password)
@@ -89,7 +99,7 @@ const useFirebase = () => {
       if (user) {
         setUser(user);
         setAdminLoading(true);
-        fetch(`http://localhost:5000/users/${user?.email}`)
+        fetch(`https://pacific-sierra-58687.herokuapp.com/users/${user?.email}`)
           .then((res) => res.json())
           .then((data) => setAdmin(data.admin))
           .finally(() => setAdminLoading(false));
@@ -103,7 +113,7 @@ const useFirebase = () => {
   // save the registered use to the mongo database
   const saveUserToDB = (name, email) => {
     const user = { name, email };
-    fetch("http://localhost:5000/users", {
+    fetch("https://pacific-sierra-58687.herokuapp.com/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 const AddProduct = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/products", {
+    fetch("https://pacific-sierra-58687.herokuapp.com/products", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -43,12 +43,12 @@ const AddProduct = () => {
         <form action="" className="form" onSubmit={handleSubmit(onSubmit)}>
           <input
             type="text"
-            placeholder="Enter Product Name*"
+            placeholder="Enter  Place Name*"
             {...register("name")}
           />
           <input
             type="text"
-            placeholder="Enter Product Price*"
+            placeholder="Enter Visiting Cost*"
             {...register("price")}
           />
           <input
@@ -58,7 +58,7 @@ const AddProduct = () => {
           />
           <input
             type="text"
-            placeholder="Enter Product Rating*"
+            placeholder="Enter Visited Rating*"
             {...register("rating")}
           />
           <textarea
@@ -66,7 +66,7 @@ const AddProduct = () => {
             id=""
             cols="22"
             rows="10"
-            placeholder="Enter a short description of the product"
+            placeholder="Enter Little Description "
             {...register("description")}
           ></textarea>
           <Button

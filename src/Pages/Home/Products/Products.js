@@ -14,7 +14,7 @@ const Products = () => {
 
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
+    fetch(`https://pacific-sierra-58687.herokuapp.com/products?page=${page}&&size=${size}`)
       .then(res => res.json())
       .then(data =>{
         setProducts(data.products);

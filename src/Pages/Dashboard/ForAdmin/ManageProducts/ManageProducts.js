@@ -10,7 +10,7 @@ const ManageProducts = () => {
     fontWeight: "600",
   };
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://pacific-sierra-58687.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data.products));
   }, [isDeleted]);
@@ -18,7 +18,7 @@ const ManageProducts = () => {
     // eslint-disable-next-line no-restricted-globals
     const confirmation = confirm("Are you sure you want to delete the product ?")
     if (confirmation) {
-      fetch(`http://localhost:5000/products/${id}`, {
+      fetch(`https://pacific-sierra-58687.herokuapp.com/products/${id}`, {
         method: 'DELETE',
       })
         .then((res) => res.json())
