@@ -1,0 +1,102 @@
+.Sub_title h2 {
+     font-size: 40px;
+     text-align: center;
+     font-family: sans-serif;
+     text-transform: uppercase;
+     font-weight: 500;
+     color: #212529;
+     padding-top: 80px;
+}
+
+.Sub_title h2 {
+     color: black;
+     position: relative;
+     padding-bottom: 15px;
+}
+
+.Sub_title h2::after {
+     position: absolute;
+     content: "";
+     background: #756146;
+     width: 100px;
+     height: 2px;
+     bottom: 0px;
+     left: 50%;
+     margin-left: -5%;
+}
+
+#Hover-slider {
+     overflow: hidden;
+
+}
+
+.hover-box-wrapper {
+     overflow: hidden;
+     float: left;
+     margin-top: 100px;
+
+}
+
+.Singel-hover-slider {
+     width: 270px;
+     overflow: hidden;
+     float: left;
+     position: relative;
+     margin-left: 20px;
+     margin-bottom: 20px;
+}
+
+.Singel-hover-slider img {
+     width: 100%;
+}
+
+.meta-content {
+     position: absolute;
+     bottom: 1px;
+     left: 0px;
+     padding: 17px 15px;
+     width: 100%;
+     color: white;
+     background: linear-gradient(to bottom, transparent, black 114px);
+     transition: 0.5s;
+     text-align: start;
+}
+
+.meta-box a {
+     color: white;
+     margin: 7px 0px;
+     display: block;
+
+}
+
+
+
+
+.meta-box h1 {
+     text-transform: uppercase;
+     font-size: 18px;
+     margin-bottom: 10px;
+}
+
+a.\32 nd-link {
+     color: white;
+     font-size: 18px;
+     display: block;
+     margin-bottom: 0px;
+     transform: translateX(-130px);
+     transition: 0.5s;
+}
+
+a.\32 nd-link i {
+     font-size: 8px;
+     margin-left: 1px;
+}
+
+.Singel-hover-slider:hover .meta-content {
+     padding: 33px 15px;
+}
+
+.Singel-hover-slider:hover a.\32 nd-link {
+
+     transform: translateX(0px);
+}

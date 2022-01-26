@@ -23,17 +23,9 @@ const Review = () => {
   return (
     <Container sx={{ my: 12 }}>
       <Box>
-        <Typography
-          variant="h3"
-          gutterBottom
-          sx={{
-            fontFamily: "var(--dosis-font )",
-            fontWeight: 600,
-            my: 4,
-          }}
-        >
-          WHAT OUR <span style={{ color: "var(--blue-color)" }}>VISITER'S SAY</span>
-        </Typography>
+      <div style={{paddingBottom:'80px'}} className="Sub_title">
+                <h2>OUR'S VISITOR SAYS</h2>
+      </div>
       </Box>
       <Slider {...settings}>
         {reviews.map((review) => (

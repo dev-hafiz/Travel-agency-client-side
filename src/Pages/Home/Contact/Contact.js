@@ -9,10 +9,10 @@ const Contact = () => {
   };
 
   return (
-    <Container>
-      <Typography variant="h3" style={contactStyle}>
-        CONTACT <span style={{ color: "var(--color)" }}>INFORMATION</span>
-      </Typography>
+    <Container style={{paddingTop:'120px'}}>
+      <div style={{paddingBottom:'80px'}} className="Sub_title">
+                <h2>CONTACT INFORMATION</h2>
+      </div>
       <Box
         sx={{ width: { xs: "90%", sm: "80%", md: "80%" }, mx: "auto", my: 4 }}
         className="contact-form"
@@ -37,7 +37,7 @@ const Contact = () => {
           <Button
             variant="contained"
             sx={{
-              backgroundImage: "var(--button-bg)",
+              background: "#756146",
               borderRadius: "25px",
               p: "8px 40px",
               mt: 3,

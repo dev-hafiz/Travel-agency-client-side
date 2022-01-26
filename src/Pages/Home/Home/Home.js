@@ -5,6 +5,7 @@ import Contact from '../Contact/Contact';
 import HomeBanner from '../HomeBanner/HomeBanner';
 import Products from '../Products/Products';
 import Review from '../Review/Review';
+import TouristSide from '../TouristSide/TouristSide';
 const containerStyle = {
   backgroundColor: "#ecf0f1",
   // backgroundImage: `url("https://i.ibb.co/f4Ryhq6/homeBg.png")`,
@@ -20,6 +21,7 @@ const Home = () => {
       </div>
       <Products></Products>
       <Review></Review>
+      <TouristSide/>
       <Contact></Contact>
       <Footer></Footer>
     </>

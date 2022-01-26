@@ -11,8 +11,9 @@ const Navigation = () => {
     fontFamily: "var(--nunito)",
     margin: "0 20px 0 20px",
     fontSize: "1rem",
-    color: "black",
+    color: "#000",
     textTransform: "none",
+    
   };
   const [isActive, setIsActive] = useState(false);
   const { user, signOutUser } = useAuth();
@@ -95,7 +96,7 @@ const Navigation = () => {
                     onClick={() => {
                       signOutUser(history);
                     }}
-                    sx={{ background:'#756146'  }}
+                    sx={{ background:'gray'  }}
                   >
                     Log Out
                   </Button>
@@ -105,7 +106,7 @@ const Navigation = () => {
                   <Button
                     style={buttonStyle}
                     variant="inherits"
-                    sx={{ background:'#756146' }}
+                    sx={{ background:'#756146'}}
                    
                   >
                     Login
