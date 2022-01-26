@@ -45,21 +45,7 @@ const Products = () => {
               >{number + 1}</button> )
             }
             </div>
-            <Button
-              variant="contained"
-              sx={{
-                backgroundImage: "var(--button-bg)",
-                borderRadius: "25px",
-                p: "8px 40px",
-                mt: 5,
-                fontSize: "17px",
-                fontWeight: 600,
-              }}
-              onClick={() => history.push("/explore")}
-            >
-              {" "}
-              View More <ArrowForwardIcon />{" "}
-            </Button>
+         
           </>
         ) : (
           <CircularProgress sx={{ mt: 50 }} />
