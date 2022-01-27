@@ -47,7 +47,7 @@ const useFirebase = () => {
       });
   };
 
-  //Email verication Massage
+  //Email verification Massage
   const verifyEmail = () =>{
     sendEmailVerification(auth.currentUser)
     .then(result=>{
